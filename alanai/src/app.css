@@ -1,0 +1,177 @@
+/* app.css */
+.centered-text {
+  font-family: "Times New Roman";
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px; /* Add some bottom margin for spacing */
+  transform: matrix3d(2);
+}
+
+/* Base styles for images */
+.i {
+  display: flex; /* Use flexbox to align items */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  border-radius: 50px; /* Rounded border with a radius of 50px */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for the transform and box-shadow properties */
+}
+
+/* Add animations on hover */
+.i:hover {
+  transform: scale(1.1); /* Slightly increase the size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+}
+
+
+.img {
+  width: 100%; /* Ensure all images have the same width */
+  height: auto;
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Container for news articles */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with minimum width of 300px */
+  gap: 30px; /* Spacing between grid items */
+  max-width: px; /* Limit container width to 1200px */
+  margin: 0 auto; /* Center container horizontally */
+  justify-content: space-around; /* Align items with equal space on the right and left sides */
+}
+
+/* Limit to 4 news cards per row */
+@media (min-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+  }
+}
+
+/* Individual article styles */
+.article {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden; /* Hide overflowing content */
+  transition: transform 0.6s ease; /* Smooth transition effect */
+  width: 400px; /* Set width */
+  height: 600px; /* Set height */
+}
+
+/* Add hover effect */
+.article:hover {
+  transform: scale(1.05); /* Scale up the card on hover */
+}
+
+/* Headline style */
+h2 {
+  margin: 0; /* Remove default margin */
+  padding: 15px; /* Add padding for better readability */
+  font-size: 1.2em; /* Set font size */
+  font-weight: bold; /* Set font weight to bold */
+  font-family: 'Arial', sans-serif; /* Specify font family */
+}
+
+/* Description style */
+p {
+  margin: 0; /* Remove default margin */
+  padding: 15px; /* Add padding for better readability */
+  font-size: 1em; /* Set font size */
+}
+
+a{
+  text-decoration: none;
+}
+/* Date style */
+.date {
+  margin: 0; /* Remove default margin */
+  padding: 15px; /* Add padding for better readability */
+  font-style: italic; /* Italicize the date */
+}
+
+/* Highlight style for active article */
+.active {
+  background-color: #f0f0f0; /* Background color for active article */
+  border-color: blue; /* Highlight border color */
+  box-shadow: 0 0 5px 2px blue; /* Add a box shadow to make it more noticeable */
+}
+
+button {
+  display: inline-block; /* Make the button behave like an inline element */
+  padding: 10px 20px; /* Add padding to the button */
+  font-size: 16px; /* Set the font size */
+  font-weight: bold; /* Set font weight to bold */
+  text-align: center; /* Center align the text */
+  color: #070606; /* Text color */
+  background-color: #007bff; /* Background color */
+  border: none; /* Remove the border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.5s ease; /* Smooth transition for background color */
+  align-items: end;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}
+.im{
+  border-radius: 50px;
+  width: 400px;
+  height:300px;
+}
+
+/* alanInstructions.css */
+
+.alan-instructions {
+  background-color: grey;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+.alan-instructions h2 {
+  color: #343a40;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  animation: slideFromLeft 0.5s ease;
+}
+
+.alan-instructions p {
+  color: #495057;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.alan-instructions ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #495057;
+}
+
+.alan-instructions li {
+  margin-bottom: 5px;
+  font-size: 1em;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideFromLeft {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+
+.body{
+  background-color:#dac8c8;
+}
